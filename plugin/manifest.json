@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "Captcha Solver",
+  "version": "1.0",
+  "description": "Solve captcha by sending base64 encoded image to localhost server",
+  "permissions": ["activeTab", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+
